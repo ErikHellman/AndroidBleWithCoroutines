@@ -34,7 +34,7 @@ class SimpleBleRepository {
 
     /**
      * Write a string to the characteristic.
-     * Will return when discover services is completed, or connection fails.
+     * Will return when the string has been written to the characteristic, or there is a failure.
      * Other BLE operations will be queued until this completes
      */
     @RequiresPermission(anyOf = [BLUETOOTH, BLUETOOTH_CONNECT])
@@ -46,7 +46,7 @@ class SimpleBleRepository {
 
     /**
      * Write read string from the characteristic.
-     * Will return when discover services is completed, or connection fails.
+     * Will return when the string hass been read from the characteristic, or there is a failure.
      * Other BLE operations will be queued until this completes
      */
     @RequiresPermission(anyOf = [BLUETOOTH, BLUETOOTH_CONNECT])
